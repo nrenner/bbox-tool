@@ -1,0 +1,193 @@
+html,body,#mapdiv {
+    width: 100%;
+    height: 100%;
+}
+
+body,a {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#info-border {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+#draw-button-border {
+    position: absolute;
+    left: 38px;
+    top: 0px;
+}
+
+.border,.olControlLayerSwitcher {
+    margin: 8px;
+    z-index: 9999;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+#info,#draw-button,.olControlLayerSwitcher .layersDiv,.olControlLayerSwitcher .maximizeDiv,.olControlLayerSwitcher .minimizeDiv
+    {
+    border-radius: 4px;
+}
+
+#info {
+    padding: 8px;
+}
+
+#info,#info a,#draw-button.default {
+    color: white;
+}
+
+#info,#info td,#info a,#draw-button {
+    font-family: Courier New, monospace;
+    font-size: 10pt;
+}
+
+#info div.smallprint,#info div.smallprint a {
+    font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+}
+
+::selection {
+    background: rgba(255, 209, 25, 0.5); /*#FFD119;*/
+}
+
+::-moz-selection {
+    background: rgba(255, 209, 25, 0.5); /*#FFD119;*/
+}
+
+.hidden {
+    display: none;
+}
+
+#draw-button {
+    padding: 3px 8px 3px 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#draw-button.pressed {
+    color: #FFD119;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#info table {
+    border-spacing: 0px;
+}
+
+#info td,#info th {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#info th {
+    text-align: left;
+    vertical-align: top;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+#info td div {
+    float: left;
+}
+
+#info .comment {
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+div.olControlZoom,.border,.olControlLayerSwitcher {
+    background: rgba(158, 158, 158, 0.7) !important;
+}
+
+div.olControlZoom a,#info,#draw-button,.olControlLayerSwitcher .layersDiv,.olControlLayerSwitcher .maximizeDiv {
+    /* fallback for IE - IE6 requires background shorthand*/
+    background: #000000 !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    filter: alpha(opacity =     70) !important;
+}
+
+div.olControlZoom a:hover,#draw-button:hover,.maximizeDiv.olButton:hover {
+    background: #000000 !important; /* fallback for IE */
+    background: rgba(0, 0, 0, 0.5) !important;
+    filter: alpha(opacity =     50) !important;
+}
+
+.minimizeDiv.olButton:hover {
+    background: #000000 !important; /* fallback for IE */
+    background: rgba(158, 158, 158, 0.2) !important;
+    filter: alpha(opacity =     50) !important;
+}
+
+.olControlAttribution,.olControlPermalink,div.olControlMousePosition {
+    text-align: right;
+    right: 8px;
+    text-shadow: -1px 0px #ddd, 0px 1px #ddd, 1px 0px #ddd, 0px -1px #ddd;
+}
+.olControlAttribution {
+    font-size: 70% !important;
+    bottom: 1.2em !important;
+}
+div.olControlMousePosition {
+    bottom: 3.5em !important;
+}
+.olControlPermalink {
+    bottom: 5em !important;
+}
+.olControlLayerSwitcher {
+    top: 0px;
+    right: 0px;
+    width: auto !important;
+}
+.layerDiv {
+    width: 20em;
+}
+.olControlLayerSwitcher .maximizeDiv,.olControlLayerSwitcher .minimizeDiv {
+    top: 0px !important;
+}
+
+.olControlLayerSwitcher .minimizeDiv {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    margin: 3px;
+}
+
+.maximizeDiv.olButton,.minimizeDiv.olButton {
+    width: 23px;
+    height: 23px;
+}
+
+.maximizeDiv .olAlphaImg {
+    margin: 2px;
+    width: 19px;
+    height: 19px;
+}
+
+.minimizeDiv .olAlphaImg {
+    /* 10x10 */
+    margin: 7px 7px 6px 6px;
+}
+
+.olControlDragFeatureOver {
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.olControlDragFeatureActive.olControlDragFeatureOver.olDragDown {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+

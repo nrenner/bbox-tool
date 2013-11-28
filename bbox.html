@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Lets you draw and edit a rectangle and outputs the coordinates in the various bbox parameter formats used by OSM tools." >
+        <title>bbox tool</title>
+        <!--
+        <link rel="stylesheet" href="openlayers/theme/default/style.css" type="text/css">
+        <link rel="stylesheet" href="ol-dev/openlayers/theme/default/style.css" type="text/css">
+        -->
+        <link rel="stylesheet" href="lib/openlayers/theme/default/style.css" type="text/css">
+
+        <link rel="stylesheet" href="bbox/bbox.css" type="text/css">
+    </head>
+    <body>
+        <div id="mapdiv"></div>
+        <div id="draw-button-border" class="border">
+            <div id="draw-button" class="default" data-i18n="draw"></div>
+        </div>
+        <div id="info-border" class="border">
+            <div id="info">
+                <div id="info-start">
+                    <div class="title">bbox tool</div>
+                    <p data-i18n="infoStart">
+                    </p>
+                    <div class="smallprint">
+                    <a href="https://github.com/nrenner/osm-bbox-tool" target="_blank">GitHub</a> &middot; 
+                    <a href="https://github.com/nrenner/osm-bbox-tool" target="_blank" data-i18n="about"></a> &middot; 
+                    <a href="http://www.openstreetmap.org/message/new/ikonor" target="_blank" data-i18n="contact"></a>
+                    </div>
+                </div>
+                <div id="info-header" class="hidden">
+                    <div data-i18n="infoResult"></div>
+                    <br/><br/>
+                    <div class="title" data-i18n="titleResult"></div>
+                </div>
+                <div id="info-result">
+                </div>
+            </div>
+        </div>
+
+        <!--
+        <script src="http://www.openlayers.org/dev/OpenLayers.js"></script>
+        <script src="openlayers/OpenLayers.js.gz"></script>
+        <script src="ol-dev/openlayers/lib/OpenLayers.js"></script>
+        <script src="file:///home/norbert/Entwicklung/github/achavi/lib/openlayers/OpenLayers.js"></script>
+        <script src="file:///home/norbert/Entwicklung/workspace/OpenLayersApps/ol-dev/openlayers/lib/OpenLayers.js"></script>
+        -->
+        <script src="lib/openlayers/OpenLayers.js"></script>
+        <script src="lib/openlayers/locale/de.js"></script>
+        <script src="lib/openlayers/locale/en.js"></script>
+
+        <script src="lib/olex-bbox.js"></script>
+        <script src="bbox/locale/de.js"></script>
+        <script src="bbox/locale/en.js"></script>
+        <script src="bbox/locale.js"></script>
+        <script src="bbox/selectText.js"></script>
+        <script src="bbox/map.js"></script>         
+    </body>
+</html>
