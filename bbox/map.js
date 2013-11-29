@@ -66,6 +66,8 @@
 
     function init() {
 
+        OpenLayers.ImgPath = "lib/openlayers/img/";
+
         var options = {
             controls : [],
             theme : null,
