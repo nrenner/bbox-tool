@@ -96,19 +96,6 @@
         graticule.labelSymbolizer.fontSize = '12px';
         map.addControl(graticule);
 
-        var urls = [ "http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.jpg",
-                "http://otile2.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.jpg",
-                "http://otile3.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.jpg",
-                "http://otile4.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.jpg" ];
-        var attrib = 'Tiles Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a>'
-                + ' <img src="http://developer.mapquest.com/content/osm/mq_logo.png">, '
-                + 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, '
-                + 'licensed under <a href="http://opendatacommons.org/licenses/odbl/">ODbL</a>';
-        map.addLayer(new OpenLayers.Layer.OSM("MapQuest Open", urls, {
-            attribution : attrib,
-            transitionEffect : "resize"
-        }));
-
         map.addLayer(new OpenLayers.Layer.OSM("OSM Mapnik", null, {
             transitionEffect : "resize"
         }));
