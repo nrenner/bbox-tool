@@ -96,26 +96,41 @@
         graticule.labelSymbolizer.fontSize = '12px';
         map.addControl(graticule);
 
+        var giscienceAttribution = 
+              '<br/><a href="http://giscience.uni-hd.de">GIScience Research Group</a> @ University of Heidelberg '
+            + '(<a href="http://korona.geog.uni-heidelberg.de/contact.html">info</a>), '
+            + 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, '
+            + 'licensed under <a href="http://opendatacommons.org/licenses/odbl/">ODbL</a>';
+
+        map.addLayer(new OpenLayers.Layer.OSM(
+                "OpenMapSurfer OSM Roads",
+                ' http://korona.geog.uni-heidelberg.de/tiles/roads/x=${x}&y=${y}&z=${z}',
+                {
+                    tileOptions : {
+                        crossOriginKeyword : null
+                    }, 
+                    transitionEffect : "resize",
+                    attribution : giscienceAttribution
+                }));
+
         map.addLayer(new OpenLayers.Layer.OSM("OSM Mapnik", null, {
             transitionEffect : "resize"
         }));
 
         map.addLayer(new OpenLayers.Layer.OSM(
                 "OpenMapSurfer Roads Grayscale",
-                'http://129.206.74.245:8008/tms_rg.ashx?x=${x}&y=${y}&z=${z}',
+                'http://korona.geog.uni-heidelberg.de/tiles/roadsg/x=${x}&y=${y}&z=${z}',
                 {
                     tileOptions : {
                         crossOriginKeyword : null
                     }, 
                     transitionEffect : "resize",
-                    attribution : '<br/><a href="http://giscience.uni-hd.de">GIScience Research Group</a> @ University of Heidelberg, '
-                        + 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, '
-                        + 'licensed under <a href="http://opendatacommons.org/licenses/odbl/">ODbL</a>'
+                    attribution : giscienceAttribution
                 }));
 
         var boundaries = new OpenLayers.Layer.OSM(
                 "OpenMapSurfer Administrative Boundaries",
-                'http://129.206.74.245:8007/tms_b.ashx?x=${x}&y=${y}&z=${z}',
+                'http://korona.geog.uni-heidelberg.de/tiles/adminb/x=${x}&y=${y}&z=${z}',
                 {
                     tileOptions : {
                         crossOriginKeyword : null
@@ -123,9 +138,7 @@
                     transitionEffect : "resize",
                     isBaseLayer : false,
                     visibility : false,
-                    attribution : '<br/><a href="http://giscience.uni-hd.de">GIScience Research Group</a> @ University of Heidelberg, '
-                        + 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, '
-                        + 'licensed under <a href="http://opendatacommons.org/licenses/odbl/">ODbL</a>'
+                    attribution : giscienceAttribution
                 });
         map.addLayer(boundaries);
 
