@@ -97,14 +97,14 @@
         map.addControl(graticule);
 
         var giscienceAttribution = 
-              '<br/><a href="http://giscience.uni-hd.de">GIScience Research Group</a> @ University of Heidelberg '
-            + '(<a href="http://korona.geog.uni-heidelberg.de/contact.html">info</a>), '
-            + 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, '
-            + 'licensed under <a href="http://opendatacommons.org/licenses/odbl/">ODbL</a>';
+              '<br/><a href="https://giscience.uni-hd.de">GIScience Research Group</a> @ University of Heidelberg '
+            + '(<a href="https://heigit.org/contact">info</a>), '
+            + 'Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, '
+            + 'licensed under <a href="https://opendatacommons.org/licenses/odbl/">ODbL</a>';
 
         map.addLayer(new OpenLayers.Layer.OSM(
                 "OpenMapSurfer OSM Roads",
-                ' http://korona.geog.uni-heidelberg.de/tiles/roads/x=${x}&y=${y}&z=${z}',
+                'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/${z}/${x}/${y}.png',
                 {
                     tileOptions : {
                         crossOriginKeyword : null
@@ -116,31 +116,6 @@
         map.addLayer(new OpenLayers.Layer.OSM("OSM Mapnik", null, {
             transitionEffect : "resize"
         }));
-
-        map.addLayer(new OpenLayers.Layer.OSM(
-                "OpenMapSurfer Roads Grayscale",
-                'http://korona.geog.uni-heidelberg.de/tiles/roadsg/x=${x}&y=${y}&z=${z}',
-                {
-                    tileOptions : {
-                        crossOriginKeyword : null
-                    }, 
-                    transitionEffect : "resize",
-                    attribution : giscienceAttribution
-                }));
-
-        var boundaries = new OpenLayers.Layer.OSM(
-                "OpenMapSurfer Administrative Boundaries",
-                'http://korona.geog.uni-heidelberg.de/tiles/adminb/x=${x}&y=${y}&z=${z}',
-                {
-                    tileOptions : {
-                        crossOriginKeyword : null
-                    },
-                    transitionEffect : "resize",
-                    isBaseLayer : false,
-                    visibility : false,
-                    attribution : giscienceAttribution
-                });
-        map.addLayer(boundaries);
 
         // bbox vector layer for drawing
         bboxLayer = new OpenLayers.Layer.Vector("box", {
