@@ -96,23 +96,6 @@
         graticule.labelSymbolizer.fontSize = '12px';
         map.addControl(graticule);
 
-        var giscienceAttribution = 
-              '<br/><a href="https://giscience.uni-hd.de">GIScience Research Group</a> @ University of Heidelberg '
-            + '(<a href="https://heigit.org/contact">info</a>), '
-            + 'Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, '
-            + 'licensed under <a href="https://opendatacommons.org/licenses/odbl/">ODbL</a>';
-
-        map.addLayer(new OpenLayers.Layer.OSM(
-                "OpenMapSurfer OSM Roads",
-                'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/${z}/${x}/${y}.png',
-                {
-                    tileOptions : {
-                        crossOriginKeyword : null
-                    }, 
-                    transitionEffect : "resize",
-                    attribution : giscienceAttribution
-                }));
-
         map.addLayer(new OpenLayers.Layer.OSM("OSM Mapnik", null, {
             transitionEffect : "resize"
         }));
